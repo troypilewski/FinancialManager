@@ -2,7 +2,6 @@ module com.fm.financemanager {
     requires javafx.controls;
     requires javafx.fxml;
 
-
     opens com.fm.financemanager to javafx.fxml;
     exports com.fm.financemanager;
     exports com.fm.financemanager.controller;
