@@ -1,6 +1,7 @@
 module com.fm.financemanager {
     requires javafx.controls;
     requires javafx.fxml;
+    requires nitrite;
 
     opens com.fm.financemanager to javafx.fxml;
     exports com.fm.financemanager;

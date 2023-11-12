@@ -11,7 +11,7 @@ public class ViewManager {
     public static void setScene(Scene scene) {
         ViewManager.scene = scene;
     }
-    public static void switchView(View view) throws IOException {
+    public static void loadView(View view) throws IOException {
         Parent root = FXMLLoader.load(ViewManager.class.getResource(view.getFilepath()));
         scene.setRoot(root);
     }

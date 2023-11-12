@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fm.financemanager.controller.MainController">
+<VBox alignment="CENTER" minWidth="792.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fm.financemanager.controller.MainController">
     <MenuBar VBox.vgrow="NEVER">
         <Menu mnemonicParsing="false" text="File">
             <MenuItem mnemonicParsing="false" text="New" />
@@ -38,58 +38,52 @@
     </MenuBar>
     <SplitPane dividerPositions="0.5" VBox.vgrow="ALWAYS">
          <AnchorPane maxWidth="240.0" minWidth="240.0">
-             <VBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-8.0"
-                   AnchorPane.topAnchor="0.0">
+             <VBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="0.0">
                  <padding>
-                     <Insets top="5.0"/>
+                     <Insets top="5.0" />
                  </padding>
-                 <TextField promptText="Search"/>
+                 <TextField promptText="Search" />
                  <TableView VBox.vgrow="ALWAYS">
                      <columns>
-                         <TableColumn prefWidth="124.0" text="First Name"/>
-                         <TableColumn prefWidth="124.0" text="Last Name"/>
+                         <TableColumn prefWidth="124.0" text="First Name" />
+                         <TableColumn prefWidth="124.0" text="Last Name" />
                      </columns>
                      <columnResizePolicy>
-                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                      </columnResizePolicy>
                  </TableView>
              </VBox>
          </AnchorPane>
-        <AnchorPane prefWidth="240.0">
-            <VBox spacing="5.0">
-                <HBox alignment="CENTER_LEFT" spacing="5.0">
-                    <Label text="Member ID: " />
-                    <TextField editable="false" prefWidth="350.0" />
-                    <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </padding>
-                </HBox>
-                <HBox alignment="CENTER_LEFT" spacing="5.0">
-                    <Label text="First Name: " />
-                    <TextField />
-                    <Label text="Last Name: " />
-                    <TextField />
-                    <Button text="Edit Customer" />
-                    <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </padding>
-                </HBox>
-                <TabPane tabClosingPolicy="ALL_TABS">
-                    <Tab closable="false" text="Accounts">
-                        <AnchorPane>
-                            <TreeTableView sortMode="ONLY_FIRST_LEVEL" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                <columns>
-                                    <TreeTableColumn prefWidth="105.0" text="Type" visible="false" />
-                                    <TreeTableColumn prefWidth="105.0" text="Account Name" />
-                                    <TreeTableColumn prefWidth="105.0" text="Account Number" visible="false" />
-                                    <TreeTableColumn prefWidth="105.0" text="Description" />
-                                    <TreeTableColumn prefWidth="105.0" text="Balance" />
-                                </columns>
-                            </TreeTableView>
-                        </AnchorPane>
-                    </Tab>
-                </TabPane>
-            </VBox>
+        <AnchorPane>
+             <HBox alignment="CENTER_LEFT" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                 <Label text="Member ID: " />
+                 <TextField editable="false" prefWidth="350.0" />
+             </HBox>
+             <HBox alignment="CENTER_LEFT" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0">
+                 <Label text="First Name: " />
+                 <TextField />
+                 <Label text="Last Name: " />
+                 <TextField />
+                 <Button text="Edit Customer" />
+             </HBox>
+             <TabPane tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                 <Tab closable="false" text="Accounts">
+                     <AnchorPane>
+                         <TreeTableView sortMode="ONLY_FIRST_LEVEL" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                             <columns>
+                                 <TreeTableColumn prefWidth="105.0" text="Type" visible="false" />
+                                 <TreeTableColumn prefWidth="105.0" text="Account Name" />
+                                 <TreeTableColumn prefWidth="105.0" text="Account Number" visible="false" />
+                                 <TreeTableColumn prefWidth="105.0" text="Description" />
+                                 <TreeTableColumn prefWidth="105.0" text="Balance" />
+                             </columns>
+                         </TreeTableView>
+                     </AnchorPane>
+                 </Tab>
+             </TabPane>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
         </AnchorPane>
       <VBox.margin>
          <Insets />

@@ -3,7 +3,6 @@ package com.fm.financemanager;
 import com.fm.financemanager.manager.View;
 import com.fm.financemanager.manager.ViewManager;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -17,7 +16,7 @@ public class Main extends Application {
 //        Scene scene = new Scene(fxmlLoader.load());
         Scene scene = new Scene(new Pane());
         ViewManager.setScene(scene);
-        ViewManager.switchView(View.MAIN);
+        ViewManager.loadView(View.MAIN);
         stage.setTitle("Finance Manager");
         stage.setScene(scene);
         stage.show();
